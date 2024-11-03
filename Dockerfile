@@ -16,7 +16,7 @@ COPY --from=builder /app/target/release/manamacro-backend .
 
 EXPOSE 3000
 
-CMD ["manamacro-backend"]
+CMD ["/app/manamacro-backend"]
 
 
 

@@ -9,6 +9,8 @@ mod routes;
 
 #[tokio::main]
 async fn main() -> Result<()>{
+    tracing_subscriber::fmt::init();
+
     let app = Router::new()
         .merge(get_openapi_routes())
         .merge(get_routes());
